@@ -1,0 +1,39 @@
+{block content}
+
+<div id="content">
+	<h1>Well done!</h1>
+	<p>Just a little reminder about Composer:</p>
+	<pre>
+$ composer update
+$ composer require &lt;vendor&gt;/&lt;package&gt;
+$ composer dump-autoload [--classmap-authoritative]
+	</pre>
+	<p>Wanna run tests?</p>
+	<pre>$ vendor/bin/run-tests tests/ -C</pre>
+	<small>For more details look into <code>.travis.yml</code> file. There is also PHP lint and Code Sniffer.</small>
+	<p>And now structure (PSR-4):</p>
+	<pre>
+<em>:root</em>
+ ├── <span style="color:maroon;font-weight:bold">app</span>/ <small>&hellip; here be dragons</small>
+ │   ├── Presenters/ <small>&hellip; presenters, controllers, whatever</small>
+ │   │   └── templates/ <small>&hellip; template files (Latte by default)</small>
+ │   ├── Router/ <small>&hellip; this is where magic happens</small>
+ │   └── <em>bootstrap.php</em> <small>&hellip; DIC creation, DIC what?</small>
+ ├── <span style="color:maroon;font-weight:bold">config</span>/ <small>&hellip; oh yeah, config files (Neon)</small>
+ ├── log/ <small>&hellip; for you know - logs</small>
+ ├── temp/ <small>&hellip; such folder, very temporary, much mess</small>
+ ├── <span style="color:maroon;font-weight:bold">tests</span>/ <small>&hellip; oh no! not again</small>
+ ├── vendor/ <small>&hellip; this is where Composer throws up</small>
+ └── <span style="color:maroon;font-weight:bold">www</span>/ <small>&hellip; world wide web</small>
+     ├── <em>.htaccess</em> <small>&hellip; see last <code>RewriteRule</code></small>
+     └── <em>index.php</em> <small>&hellip; release the Kraken!</small>
+	</pre>
+	<p><strong>Hey!</strong> Don't forget to share your experience on Twitter. I'll be very happy.</p>
+	<a href="https://twitter.com/intent/tweet?button_hashtag=nettefw" class="twitter-hashtag-button" data-size="large" data-text="Právě jsem na Nette workshopu od @mrtnzlml a konečně tomu rozumím!" data-related="mrtnzlml" data-show-count="false">Tweet #nettefw</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<style>
+	html { font: normal 18px/1.3 Georgia, "New York CE", utopia, serif; color: #333; -webkit-text-stroke: 1px rgba(0, 0, 0, 0); overflow-y: scroll; }
+	#content { margin: 2em auto; padding: 1em 3em; max-width: 600px; min-width: 320px; background: #eee; }
+	small { color: #888; font-style: italic; }
+</style>
